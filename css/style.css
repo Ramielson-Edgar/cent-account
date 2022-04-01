@@ -702,7 +702,7 @@ tr:not(:last-child) td {
 }
 
 .icon-fiat::before {
-   top: -50px;
+  top: -50px;
   left: -20px;
   width: 150px;
   background-image: url("../img/icon-fiat-account.png");
@@ -714,7 +714,6 @@ tr:not(:last-child) td {
   width: 150px;
   background-image: url("../img/crypto-account-icon.png");
 }
-
 
 .btn-account:hover {
   transform: translateY(-10px);
@@ -859,6 +858,16 @@ tr:not(:last-child) td {
 }
 .copy-section .gradient-wave::after {
   top: 200px;
+}
+
+.account-description .heading img {
+  display: inline;
+  vertical-align: text-bottom;
+  width: 180px;
+}
+
+.account-description .description {
+  margin-top: 50px;
 }
 
 @media (max-width: 1200px) {
@@ -1170,6 +1179,10 @@ tr:not(:last-child) td {
   .section-transition::before {
     top: 50px;
   }
+
+  .account-description .heading img {
+    width: 100px;
+} 
 
   .features__item {
     align-items: stretch;
