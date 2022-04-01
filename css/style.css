@@ -651,6 +651,7 @@ tr:not(:last-child) td {
 
 .discover-header {
   color: #312a7f;
+  font-weight: 400;
 }
 
 .discover-section .btn-wrapper .split-wrapper {
