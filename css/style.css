@@ -670,6 +670,14 @@ tr:not(:last-child) td {
   transition: all 0.3s ease-in;
 }
 
+.btn-account .split-wrapper p {
+  font-size: var(--font-size-16);
+  font-weight: 400;
+}
+
+.btn-account .split-wrapper .bx-chevron-right { font-weight: 500;}
+
+
 .icon-crypto::after,
 .icon-crypto::before,
 .icon-fiat::after,
