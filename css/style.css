@@ -1332,7 +1332,8 @@ tr:not(:last-child) td {
     justify-content: center;
   }
   .separator-wrapper::before {
-    width: 98%;
+    width: 400px;
+    left: 47%;
   }
 
   .security-list {
@@ -1347,6 +1348,11 @@ tr:not(:last-child) td {
   .security-header {
     margin-bottom: 30px;
   }
+  .separator-wrapper::before {
+    width: 90%;
+    top: 0;
+  }
+
   .account-description .heading,
   .section-header h2 {
     font-size: 32px;
@@ -1400,6 +1406,10 @@ tr:not(:last-child) td {
     width: 120px;
     height: 120px;
     left: -10px;
+  }
+
+  .separator-wrapper::before {
+    top: 30px;
   }
 
   .account-description .heading,
