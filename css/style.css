@@ -10,16 +10,13 @@
   --font-size-20: 1.25rem;
   --font-size-16: 1rem;
   --font-size-14: 0.875rem;
-
   --font-wight-700: 700;
   --font-wight-400: 400;
   --font-wight-800: 800;
-
   --white-color: #fff;
   --text-color-primary: #54279d;
-  --text-color-secondary: ;
   --text-color-dark: #37333d;
-  ---text-color-accent: #651fff;
+  --text-color-accent: #651fff;
   --icon-green: #a0ffc6;
   --main-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.5) -47.74%, rgba(255, 255, 255, 0) 90.33%),
     linear-gradient(180deg, rgb(42, 144, 120) 0%, rgba(0, 20, 198, 0.38) 100%);
@@ -138,7 +135,7 @@ a {
 }
 
 .text-accent {
-  color: var(---text-color-accent);
+  color: var(--text-color-accent);
   font-family: var(--header-font-family);
   font-weight: var(--font-wight-700);
 }
@@ -685,38 +682,32 @@ tr:not(:last-child) td {
   font-weight: 500;
 }
 
-.icon-crypto::after,
 .icon-crypto::before,
-.icon-fiat::after,
 .icon-fiat::before {
   position: absolute;
   display: block;
   content: "";
 
+  width: 200px;
+  height: 150px;
+
   top: -30px;
   left: -40px;
-
-  width: 200px;
-  height: 200px;
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-
   z-index: 1;
 }
 
 .icon-fiat::before {
-  top: -50px;
-  left: -20px;
-  width: 150px;
   background-image: url("../img/icon-fiat-account.png");
 }
 
 .icon-crypto::before {
-  top: -50px;
-  left: -20px;
-  width: 150px;
+  width: 200px;
+  height: 200px;
+  top: -40px;
   background-image: url("../img/crypto-account-icon.png");
 }
 
@@ -747,7 +738,6 @@ tr:not(:last-child) td {
 /* COPY SECTION  */
 .copy-section header .split-wrapper {
   justify-content: flex-start;
-  align-items: left;
 }
 
 .copy-section .heading {
@@ -791,9 +781,9 @@ tr:not(:last-child) td {
   background-size: cover;
   background-position: left;
 
-  -webkit-transform: scaleX(-1);
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
+  --webkit-transform: scaleX(-1);
+  --moz-transform: scaleX(-1);
+  --o-transform: scaleX(-1);
   transform: scaleX(-1);
   opacity: 0.8;
 
@@ -880,7 +870,7 @@ tr:not(:last-child) td {
     padding-bottom: 0;
   }
   .btn-account a {
-    padding: 20px 18px 20px 150px;
+    padding: 20px 18px 20px 120px;
   }
   .copy-section-btn a {
     padding: 15px 30px;
@@ -1117,10 +1107,10 @@ tr:not(:last-child) td {
   }
 
   .icon-crypto::before {
-    width: 150px;
-    height: 100px;
-    top: 0;
-    left: -40px;
+    width: 200px;
+    height: 200px;
+    top: -30px;
+    left: -60px;
   }
 
   .btn-account {
@@ -1187,9 +1177,24 @@ tr:not(:last-child) td {
   table {
     margin-bottom: 40px;
   }
+  .wrapper-list {
+    padding: 0;
+  }
 
-  .account-stats::before {left: -10px;}
-  .account-stats .heading {margin-right: 5px;}
+  .btn-account a {
+    padding: 20px 20px 20px 120px;
+  }
+
+  .btn-account p {
+    font-size: 1rem;
+  }
+
+  .account-stats::before {
+    left: -10px;
+  }
+  .account-stats .heading {
+    margin-right: 5px;
+  }
 
   .section-transition::before {
     top: 50px;
@@ -1209,10 +1214,25 @@ tr:not(:last-child) td {
   }
 
   .features__item .card {
-    padding: 10px;
     flex-basis: auto;
+    gap: 30px;
   }
 
+  .features__item .card__img-container,
+  .features__item .card__body {
+    width: 60px;
+  }
+
+  .features__item .card__body p {
+    font-size: var(--font-size-14);
+  }
+  .features__item .card__body h4 {
+    font-size: 1rem;
+  }
+
+  .hero-section .wrapper-list {
+    padding-bottom: 50px;
+  }
   .hero-section {
     padding-top: 70px;
   }
@@ -1240,13 +1260,19 @@ tr:not(:last-child) td {
     padding: 0;
   }
 
-  .btn-account:first-child::after,
-  .btn-account:first-child::before {
-    height: 120px;
-    width: 120px;
+  .btn-account::before {
+    top: -40px;
+    left: -24px;
+  }
 
-    top: -20px;
-    left: 0;
+  .icon-fiat::before {
+    width: 150px;
+    height: 150px;
+    left: -10px;
+  }
+
+  .icon-crypto::before {
+    left: -40px;
   }
 
   .separator-banner {
@@ -1326,8 +1352,26 @@ tr:not(:last-child) td {
     font-size: 32px;
   }
 
+  .btn-account::before {
+    top: -40px;
+    left: -24px;
+  }
+
+  .icon-crypto::before {
+    width: 150px;
+    height: 150px;
+    left: -30px !important;
+    top: -30px !important;
+  }
+
+  .icon-fiat::before {
+    width: 120px;
+    height: 120px;
+    left: -10px;
+  }
+
   .btn-account a {
-    padding: 10px 10px 10px 120px;
+    padding: 10px 10px 10px 100px;
   }
 
   .btn-account p,
@@ -1345,17 +1389,23 @@ tr:not(:last-child) td {
 }
 
 @media (max-width: 320px) {
-  .btn-account:first-child::after,
-  .btn-account:first-child::before {
-    height: 120px;
-    width: 120px;
+  .icon-crypto::before {
+    width: 150px;
+    height: 150px;
+    left: -30px !important;
+    top: -30px !important;
+  }
 
-    top: -40px;
+  .icon-fiat::before {
+    width: 120px;
+    height: 120px;
     left: -10px;
   }
 
-
-  .account-description .heading, .section-header h2 {font-size:  27px;}
+  .account-description .heading,
+  .section-header h2 {
+    font-size: 27px;
+  }
 
   .btn-account a {
     padding: 10px 10px 10px 120px;
