@@ -865,6 +865,10 @@ tr:not(:last-child) td {
   margin-top: 50px;
 }
 
+.copy-section-btn .btn .btn-black {padding: 20px 60px;}
+
+
+
 @media (max-width: 1200px) {
   .features-section {
     padding-bottom: 0;
@@ -872,10 +876,13 @@ tr:not(:last-child) td {
   .btn-account a {
     padding: 20px 18px 20px 120px;
   }
+
+  .copy-section-btn .btn .btn-black,
   .copy-section-btn a {
     padding: 15px 30px;
     font-size: 1rem;
   }
+  .copy-section-btn .btn .btn-black {padding: 15px 40px;}
 
   .header-banner {
     max-width: 430px;
